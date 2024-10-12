@@ -1,0 +1,25 @@
+import funkin.ui.debug.charting.util.GenerateChartOperator;
+import funkin.ui.debug.charting.handlers.ChartEditorChartGeneratorHandler;
+
+class CustomGenerateChartOperator extends GenerateChartOperator
+{
+  public function new()
+  {
+    super('customOperator', 'Custom Algorithm');
+  }
+
+  /**
+   * Creates the chart
+   * @param data The note data
+   * @return The notes to generate
+   */
+  override public function execute(data:Array<NoteMidiData>) // :Array<SongNoteData>
+  {
+    var notes = []; // Array<SongNoteData>
+    for (d in data)
+    {
+      notes.push(createNote(d.time, d.note % 4 + (d.isPlayerNote ? 0 : 4), d.length));
+    }
+    return notes;
+  }
+}
