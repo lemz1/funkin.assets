@@ -19,7 +19,6 @@
       <vbox width="50%">
         <textfield id="charAnimPrefix" placeholder="Anim Prefix" width="100%"/>
         <textfield id="charAnimFrames" placeholder="Anim Frame Indices" width="100%"/>
-        <textfield id="charAnimPath" placeholder="Anim Asset Path" width="100%" disabled="true"/>
         <checkbox id="charAnimLooped" text="Looped"/>
         <checkbox id="charAnimFlipX" text="Flip X"/>
         <checkbox id="charAnimFlipY" text="Flip Y"/>
