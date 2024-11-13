@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collapsible-dialog title="Playable Character Settings" width="400" height="400">
+  <vbox width="100%" height="100%">
+    <textfield id="ownedCharsField" width="50%" placeholder="Character ID"/>
+  </vbox>
+</collapsible-dialog>
