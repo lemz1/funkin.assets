@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collapsible-dialog title="Freeplay DJ Settings" width="400" height="400">
+  <vbox width="100%" height="100%">
+    <frame text="Background Texts" width="100%" height="120">
+      <vbox width="100%" height="100%">
+        <textfield id="bgTextField1" placeholder="BOYFRIEND" width="100%" height="100%" />
+        <textfield id="bgTextField2" placeholder="HOT BLOODED IN MORE WAYS THAN ONE" width="100%" height="100%" />
+        <textfield id="bgTextField3" placeholder="PROTECT YO NUTS" width="100%" height="100%" />
+      </vbox>
+    </frame>
+  </vbox>
+</collapsible-dialog>
