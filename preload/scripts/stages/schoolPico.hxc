@@ -1,7 +1,7 @@
 import funkin.play.PlayState;
 import funkin.play.stage.Stage;
 import funkin.graphics.shaders.DropShadowShader;
-import funkin.play.character.CharacterType;
+import funkin.play.character.BaseCharacter;
 
 class SchoolPicoStage extends Stage
 {

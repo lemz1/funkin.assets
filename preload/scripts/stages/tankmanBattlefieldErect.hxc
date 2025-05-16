@@ -3,7 +3,7 @@ import flixel.math.FlxAngle;
 import funkin.play.PlayState;
 import funkin.play.stage.Stage;
 import funkin.graphics.shaders.DropShadowShader;
-import funkin.play.character.CharacterType;
+import funkin.play.character.BaseCharacter;
 import openfl.display.BitmapData;
 import flixel.graphics.FlxGraphic;
 
