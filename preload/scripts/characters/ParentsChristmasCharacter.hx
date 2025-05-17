@@ -7,7 +7,7 @@ import funkin.modding.events.ScriptEvent;
 
 class ParentsChristmasCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('parents-christmas');
   }

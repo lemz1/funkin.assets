@@ -1,14 +1,12 @@
 package characters;
 
+import stages.props.ABotAtlasSprite;
 import funkin.play.character.MultiSparrowCharacter;
 import funkin.play.PlayState;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
 import funkin.graphics.FunkinSprite;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
-import funkin.modding.base.ScriptedFlxSprite;
-import funkin.modding.base.ScriptedFlxSpriteGroup;
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import funkin.audio.visualize.ABotVis;
 import funkin.modding.events.ScriptEvent;
@@ -16,7 +14,7 @@ import funkin.Paths;
 
 class NeneCharacter extends MultiSparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('nene');
   }
@@ -26,11 +24,11 @@ class NeneCharacter extends MultiSparrowCharacter
   static final PUPIL_STATE_NORMAL = 0;
   static final PUPIL_STATE_LEFT = 1;
 
-  var abot:FlxAtlasSprite;
-  var abotViz:ABotVis;
-  var stereoBG:FlxSprite;
-  var eyeWhites:FlxSprite;
-  var pupil:FlxAtlasSprite;
+  public var abot:FlxAtlasSprite;
+  public var abotViz:ABotVis;
+  public var stereoBG:FlxSprite;
+  public var eyeWhites:FlxSprite;
+  public var pupil:FlxAtlasSprite;
 
   override function onCreate(event:ScriptEvent)
   {
@@ -45,7 +43,7 @@ class NeneCharacter extends MultiSparrowCharacter
     pupil.y = this.y;
     pupil.zIndex = this.zIndex - 5;
 
-    abot = ScriptedFlxAtlasSprite.init('ABotAtlasSprite', 0, 0);
+    abot = new ABotAtlasSprite(0, 0);
     abot.x = this.x;
     abot.y = this.y;
     abot.zIndex = this.zIndex - 1;
@@ -174,7 +172,7 @@ class NeneCharacter extends MultiSparrowCharacter
    * When true, Nene's hair will start blowing to the side, used in Week 3.
    * Depending on the state she's in, her hair will blow with or without her knife raised.
    */
-  var trainPassing:Bool = false;
+  public var trainPassing:Bool = false;
 
   override function dance(forceRestart:Bool = false)
   {

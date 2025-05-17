@@ -10,7 +10,6 @@ import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import flixel.FlxSprite;
 import flixel.FlxG;
-import funkin.modding.base.ScriptedFunkinSprite;
 import flixel.group.FlxSpriteGroup;
 import flixel.effects.FlxFlicker;
 import funkin.play.PauseSubState;
@@ -22,7 +21,7 @@ import funkin.Paths;
 
 class PicoHoldingNeneCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('pico-holding-nene');
   }

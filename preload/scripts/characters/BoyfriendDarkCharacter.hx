@@ -13,7 +13,7 @@ import funkin.modding.events.ScriptEvent;
 
 class BoyfriendDarkCharacter extends MultiSparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('bf-dark');
   }

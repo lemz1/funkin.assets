@@ -1,5 +1,6 @@
 package characters;
 
+import stages.props.ABotAtlasSprite;
 import funkin.data.song.SongData;
 import funkin.play.song.Song;
 import funkin.play.character.SparrowCharacter;
@@ -14,9 +15,6 @@ import funkin.util.SortUtil;
 import funkin.play.PlayState;
 import flixel.group.FlxSpriteGroup;
 import funkin.graphics.FunkinSprite;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
-import funkin.modding.base.ScriptedFlxSprite;
-import funkin.modding.base.ScriptedFlxSpriteGroup;
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import funkin.audio.visualize.ABotVis;
 import funkin.graphics.shaders.DropShadowShader;
@@ -43,7 +41,7 @@ class OtisSpeakerCharacter extends SparrowCharacter
 
   var muzzleFlash:FlxSprite;
 
-  function new()
+  public function new()
   {
     super('otis-speaker');
 
@@ -83,7 +81,7 @@ class OtisSpeakerCharacter extends SparrowCharacter
     pupil.y = this.y;
     pupil.zIndex = this.zIndex - 5;
 
-    abot = ScriptedFlxAtlasSprite.init('ABotAtlasSprite', 0, 0);
+    abot = new ABotAtlasSprite(0, 0);
     abot.x = this.x;
     abot.y = this.y;
     abot.zIndex = this.zIndex - 1;

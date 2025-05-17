@@ -11,7 +11,7 @@ import funkin.Paths;
 
 class DarnellCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('darnell');
   }

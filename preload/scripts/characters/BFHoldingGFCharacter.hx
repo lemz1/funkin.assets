@@ -10,7 +10,7 @@ import funkin.Paths;
 
 class BFHoldingGFCharacter extends MultiSparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('bf-holding-gf');
   }

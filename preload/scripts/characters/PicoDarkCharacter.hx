@@ -16,7 +16,7 @@ import funkin.modding.events.ScriptEvent;
 
 class PicoDarkCharacter extends MultiSparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('pico-dark');
   }

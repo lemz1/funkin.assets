@@ -13,7 +13,7 @@ import funkin.modding.events.ScriptEvent;
 
 class SpookyDarkCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('spooky-dark');
 

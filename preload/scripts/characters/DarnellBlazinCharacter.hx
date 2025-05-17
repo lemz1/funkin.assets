@@ -8,7 +8,7 @@ import StringTools;
 
 class DarnellBlazinCharacter extends AnimateAtlasCharacter
 {
-  function new()
+  public function new()
   {
     super('darnell-blazin');
   }

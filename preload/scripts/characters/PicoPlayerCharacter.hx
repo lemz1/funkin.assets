@@ -1,5 +1,6 @@
 package characters;
 
+import stages.props.CasingSprite;
 import funkin.play.character.MultiSparrowCharacter;
 import funkin.play.character.BaseCharacter;
 import funkin.play.PlayState;
@@ -10,7 +11,6 @@ import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import flixel.FlxSprite;
 import flixel.FlxG;
-import funkin.modding.base.ScriptedFunkinSprite;
 import flixel.group.FlxSpriteGroup;
 import flixel.effects.FlxFlicker;
 import funkin.play.PauseSubState;
@@ -21,7 +21,7 @@ import funkin.Paths;
 
 class PicoPlayerCharacter extends MultiSparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('pico-playable');
 
@@ -335,20 +335,20 @@ class PicoPlayerCharacter extends MultiSparrowCharacter
     }
   }
 
-  var casingGroup:FlxTypedSpriteGroup<FlxSprite>;
+  var casingGroup:FlxTypedSpriteGroup<CasingSprite>;
 
   function createCasing()
   {
     if (casingGroup == null)
     {
-      casingGroup = new FlxTypedSpriteGroup<FlxSprite>();
+      casingGroup = new FlxTypedSpriteGroup<CasingSprite>();
       casingGroup.x = this.x + 250;
       casingGroup.y = this.y + 100;
       casingGroup.zIndex = 1000;
       addToStage(casingGroup);
     }
 
-    var casing = ScriptedFunkinSprite.init('CasingSprite', 0, 0);
+    var casing = new CasingSprite();
     if (casing != null) casingGroup.add(casing);
   }
 

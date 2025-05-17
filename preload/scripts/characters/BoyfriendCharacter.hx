@@ -11,7 +11,7 @@ import funkin.Paths;
 
 class BoyfriendCharacter extends MultiSparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('bf');
   }

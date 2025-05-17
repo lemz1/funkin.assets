@@ -1,0 +1,39 @@
+package songs;
+
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.save.Save;
+import funkin.play.PlayStatePlaylist;
+import funkin.modding.events.ScriptEvent;
+
+class LitUpSong extends Song
+{
+  public function new()
+  {
+    super('lit-up');
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'bf') return !Save.instance.hasBeatenSong(this.id, null, 'bf');
+
+    return false;
+  }
+
+  public override function listDifficulties(?variationId:String, ?variationIds:Array<String>, showLocked:Bool = false, showHidden:Bool = false):Array<String>
+  {
+    if (showLocked || Save.instance.hasBeatenLevel('weekend1'))
+    {
+      return super.listDifficulties(variationId, variationIds);
+    }
+    // Hide all difficulties if the player has not beaten the week.
+    return [];
+  }
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    // NOTE: Lit Up (BF Mix) is incompatible with the base song, so this should always be empty.
+    return [];
+  }
+}

@@ -6,9 +6,6 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
 import funkin.graphics.FunkinSprite;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
-import funkin.modding.base.ScriptedFlxSprite;
-import funkin.modding.base.ScriptedFlxSpriteGroup;
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import funkin.audio.visualize.ABotVis;
 import funkin.graphics.shaders.AdjustColorShader;
@@ -17,7 +14,7 @@ import funkin.modding.events.ScriptEvent;
 
 class NenePixelCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('nene-pixel');
   }
@@ -169,7 +166,7 @@ class NenePixelCharacter extends SparrowCharacter
 
   var blinkCountdown:Int = MIN_BLINK_DELAY;
 
-  function addSunsetShaders()
+  public function addSunsetShaders()
   {
     var abotSpeakerShader = new DropShadowShader();
     abotSpeakerShader.setAdjustColor(-66, -10, 24, -23);

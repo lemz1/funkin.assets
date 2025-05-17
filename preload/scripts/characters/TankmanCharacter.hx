@@ -7,7 +7,7 @@ import funkin.modding.events.ScriptEvent;
 
 class TankmanCharacter extends MultiSparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('tankman');
   }

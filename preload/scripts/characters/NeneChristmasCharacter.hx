@@ -1,14 +1,12 @@
 package characters;
 
+import stages.props.ABotAtlasSprite;
 import funkin.play.character.SparrowCharacter;
 import funkin.play.PlayState;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
 import funkin.graphics.FunkinSprite;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
-import funkin.modding.base.ScriptedFlxSprite;
-import funkin.modding.base.ScriptedFlxSpriteGroup;
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import funkin.audio.visualize.ABotVis;
 import funkin.modding.events.ScriptEvent;
@@ -16,7 +14,7 @@ import funkin.Paths;
 
 class NeneChristmasCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('nene-christmas');
   }
@@ -45,7 +43,7 @@ class NeneChristmasCharacter extends SparrowCharacter
     pupil.y = this.y;
     pupil.zIndex = this.zIndex - 5;
 
-    abot = ScriptedFlxAtlasSprite.init('ABotAtlasSprite', 0, 0);
+    abot = new ABotAtlasSprite(0, 0);
     abot.x = this.x;
     abot.y = this.y;
     abot.zIndex = this.zIndex - 1;

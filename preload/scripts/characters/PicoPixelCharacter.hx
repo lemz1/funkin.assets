@@ -11,7 +11,7 @@ import funkin.modding.events.ScriptEvent;
 
 class PicoPixelCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('pico-pixel');
   }

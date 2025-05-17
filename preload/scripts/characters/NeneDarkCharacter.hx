@@ -1,14 +1,12 @@
 package characters;
 
+import stages.props.ABotAtlasSprite;
 import funkin.play.character.SparrowCharacter;
 import funkin.play.PlayState;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
 import funkin.graphics.FunkinSprite;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
-import funkin.modding.base.ScriptedFlxSprite;
-import funkin.modding.base.ScriptedFlxSpriteGroup;
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import funkin.audio.visualize.ABotVis;
 import funkin.play.character.BaseCharacter;
@@ -23,7 +21,7 @@ import funkin.Paths;
 
 class NeneDarkCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('nene-dark');
   }
@@ -74,7 +72,7 @@ class NeneDarkCharacter extends SparrowCharacter
 
     testShader = new TextureSwap();
     testShader.loadSwapImage('assets/shared/images/characters/abot/dark/abotSystem/spritemap1.png');
-    abot = ScriptedFlxAtlasSprite.init('ABotAtlasSprite', 0, 0);
+    abot = new ABotAtlasSprite(0, 0);
     abot.x = this.x;
     abot.y = this.y;
     abot.zIndex = this.zIndex - 1;

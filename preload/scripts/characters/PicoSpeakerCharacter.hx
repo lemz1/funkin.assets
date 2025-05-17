@@ -19,7 +19,7 @@ class PicoSpeakerCharacter extends SparrowCharacter
   var shootTimes:Array<Float> = [];
   var shootDirs:Array<Int> = [];
 
-  function new()
+  public function new()
   {
     super('pico-speaker');
 

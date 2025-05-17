@@ -1,0 +1,17 @@
+package players;
+
+import funkin.ui.freeplay.charselect.PlayableCharacter;
+import funkin.save.Save;
+
+class PicoPlayableCharacter extends PlayableCharacter
+{
+  public function new()
+  {
+    super('pico');
+  }
+
+  override function isUnlocked():Bool
+  {
+    return Save.instance.hasBeatenLevel('weekend1');
+  }
+}

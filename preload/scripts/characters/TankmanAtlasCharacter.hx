@@ -10,7 +10,7 @@ import funkin.modding.events.ScriptEvent;
  */
 class TankmanAtlasCharacter extends AnimateAtlasCharacter
 {
-  function new()
+  public function new()
   {
     super('tankman-atlas');
   }

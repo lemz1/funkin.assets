@@ -9,7 +9,7 @@ import funkin.modding.events.ScriptEvent;
 
 class GirlfriendCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('gf');
   }

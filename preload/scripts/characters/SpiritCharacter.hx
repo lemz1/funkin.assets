@@ -10,7 +10,7 @@ import flixel.FlxG;
 
 class SpiritCharacter extends PackerCharacter
 {
-  function new()
+  public function new()
   {
     super('spirit');
   }

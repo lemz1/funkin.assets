@@ -12,7 +12,7 @@ import StringTools;
 
 class PicoBlazinCharacter extends AnimateAtlasCharacter
 {
-  function new()
+  public function new()
   {
     super('pico-blazin');
   }
