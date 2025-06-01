@@ -26,9 +26,12 @@ class PicoDarkCharacter extends MultiSparrowCharacter
   override function set_alpha(val:Float):Float
   {
     super.set_alpha(val);
-    if (val != 1) normalChar.alpha = 1;
-    else
-      normalChar.alpha = 0;
+    if (normalChar != null)
+    {
+      if (val != 1) normalChar.alpha = 1;
+      else
+        normalChar.alpha = 0;
+    }
 
     return val;
   }

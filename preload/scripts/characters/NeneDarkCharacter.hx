@@ -46,12 +46,15 @@ class NeneDarkCharacter extends SparrowCharacter
   override function set_alpha(val:Float):Float
   {
     super.set_alpha(val);
-    testShader.amount = val;
-    if (val != 1) normalChar.alpha = 1;
-    else
-      normalChar.alpha = 0;
+    if (testShader != null) testShader.amount = val;
+    if (normalChar != null)
+    {
+      if (val != 1) normalChar.alpha = 1;
+      else
+        normalChar.alpha = 0;
+    }
 
-    eyeWhites.color = FlxColorUtil.interpolate(0xFFFFFFFF, 0xFF6F96CE, val);
+    if (eyeWhites != null) eyeWhites.color = FlxColorUtil.interpolate(0xFFFFFFFF, 0xFF6F96CE, val);
 
     return val;
   }

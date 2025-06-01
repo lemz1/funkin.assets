@@ -26,7 +26,7 @@ class TankmanSpriteGroup extends FlxTypedSpriteGroup<TankmanSprite>
     super(0, 0, 4);
     this.zIndex = 30;
 
-    this.isErect = (erect != null) ? erect : false;
+    this.isErect = erect;
     trace('Initializing TankmanSpriteGroup... ' + (this.isErect ? ' (erect)' : ' (base)'));
   }
 
